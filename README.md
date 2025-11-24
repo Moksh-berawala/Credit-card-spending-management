@@ -1,98 +1,169 @@
-# Credit Card Spending Analyzer
-## Overview
+# Credit Card Spending Analyzer 
 
-This project is a Python program designed to analyze credit card spending data stored in a CSV file. It processes each transaction, groups expenses by category, calculates total spending, and determines the minimum payment due based on 3 percent of the total amount.
+## Overview 
 
-## Features
 
-Reads transaction data from a CSV file
 
-Groups spending by category
+This project is a Python program that analyzes credit card spending data stored in a CSV file.
 
-Calculates total spending
+ It goes through each transaction, organizes expenses by category, calculates the total amount spent, and figures out the minimum payment due, which is 3% of the total.
 
-Computes minimum payment (3 percent of total)
 
-Displays a formatted summary report in the terminal
 
-Handles common errors such as missing files, missing columns, or invalid data
+## Features 
 
-## CSV Format
 
-The program expects a CSV file with the following lowercase column names:
 
-date
+- Reads transaction data from a CSV file 
 
-category
+- Groups spending by category 
 
-amount
+- Calculates total spending 
 
-description
+- Computes the minimum payment (3% of total) 
 
-```bash
+- Displays a formatted summary report in the terminal 
+
+- Handles common issues like missing files, missing columns, or invalid data 
+
+
+
+## CSV Format 
+
+
+
+The program expects a CSV file with these lowercase column names: 
+
+
+
+- date 
+
+- category 
+
+- amount 
+
+- description 
+
+
+
+Example: 
+
+
+
 date,category,amount,description
+
 11-11-2025,food,850,dominos
+
 12-11-2025,shopping,3500,zara
+
 13-11-2025,travel,250,uber
+
 14-11-2025,bills,2000,electricity
-```
 
-## Requirements
 
-Python 3.x
 
-### Uses only built-in modules:
 
-csv
 
-datetime
+## Requirements 
 
-collections
 
-## How to Run
 
-Place the Python script and the CSV file in the same directory.
+- Python 3.x 
 
-Open a terminal in that directory.
 
-Run the command:
 
-```bash
+### Uses only built-in modules: 
+
+
+
+- csv 
+
+- datetime 
+
+- collections 
+
+
+
+## How to Run 
+
+
+
+Place the Python script and the CSV file in the same folder.
+
+
+
+
+
+Open a terminal in that folder.
+
+
+
+
+
+Run the command: 
+
+
+
+bash
+
 python card_spending.py
-```
-The spending summary will be printed in the terminal.
 
-## How It Works
+ 
 
-Reads each transaction from the CSV file using csv.DictReader
 
-Sums amounts per category using defaultdict(float)
 
-Calculates total spending and minimum payment
+The spending summary will be shown in the terminal.
 
-Sorts and displays category spending from highest to lowest
 
-Returns key results for potential further use
 
-## Error Handling
 
-### The program handles:
 
-Missing or incorrect file paths
+## How It Works 
 
-Missing required columns
 
-Invalid numeric values in the amount field
 
-## Future Improvements
+- The program reads each transaction from the CSV file using csv.DictReader 
 
-Monthly filtering
+- It adds up the amounts for each category using defaultdict(float) 
 
-Interest calculation
+- It totals the spending and determines the minimum payment 
 
-Exporting reports to text, CSV, or PDF
+- It sorts and displays the category spending from highest to lowest 
 
-Graphical visualization of spending trends
+- It returns key results for possible further use 
 
-## Maintaned by
-**Moksh Berawala** 
+
+
+## Error Handling 
+
+
+
+The program manages the following: 
+
+
+
+- Missing or incorrect file paths 
+
+- Missing required columns 
+
+- Invalid numeric values in the amount field 
+
+
+
+## Future Improvements 
+
+
+
+- Filtering by month 
+
+- Calculating interest 
+
+- Exporting reports to text, CSV, or PDF 
+
+- Visualizing spending trends with graphs 
+
+
+
+## Maintained by 
+
+*Moksh Berawala*

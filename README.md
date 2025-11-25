@@ -1,169 +1,109 @@
-# Credit Card Spending Analyzer 
 
-## Overview 
+# Credit Card Spending Analyzer
 
+This Python project allows users to analyze and manage their credit card spending using a CSV file as storage.
+It provides features such as spending breakdown by category, minimum payment calculation, and full transaction CRUD operations.
 
+---
 
-This project is a Python program that analyzes credit card spending data stored in a CSV file.
+## Features
 
- It goes through each transaction, organizes expenses by category, calculates the total amount spent, and figures out the minimum payment due, which is 3% of the total.
+- Analyze spending by category  
+- Calculate total spending  
+- Calculate minimum due amount (3%)  
+- View all transactions  
+- Add new transactions  
+- Edit existing transactions  
+- Delete transactions  
+- CLI-based menu navigation  
 
+---
 
+## Project Structure
 
-## Features 
-
-
-
-- Reads transaction data from a CSV file 
-
-- Groups spending by category 
-
-- Calculates total spending 
-
-- Computes the minimum payment (3% of total) 
-
-- Displays a formatted summary report in the terminal 
-
-- Handles common issues like missing files, missing columns, or invalid data 
-
-
-
-## CSV Format 
-
-
-
-The program expects a CSV file with these lowercase column names: 
-
-
-
-- date 
-
-- category 
-
-- amount 
-
-- description 
-
-
-
-Example: 
-
-
-
-date,category,amount,description
-
-11-11-2025,food,850,dominos
-
-12-11-2025,shopping,3500,zara
-
-13-11-2025,travel,250,uber
-
-14-11-2025,bills,2000,electricity
-
-
-
-
-
-## Requirements 
-
-
-
-- Python 3.x 
-
-
-
-### Uses only built-in modules: 
-
-
-
-- csv 
-
-- datetime 
-
-- collections 
-
-
-
-## How to Run 
-
-
-
-Place the Python script and the CSV file in the same folder.
-
-
-
-
-
-Open a terminal in that folder.
-
-
-
-
-
-Run the command: 
-
-
-
-bash
-
-python card_spending.py
-
+```
+main.py                → Contains the entire program logic  
+transactions.csv       → Auto-created file storing transactions  
  
+```
 
+---
 
+## How It Works
 
-The spending summary will be shown in the terminal.
+### **1. Input CSV Format**
 
+The application expects the CSV file to contain the following columns:
 
+```
+date, category, amount, description
+```
 
+---
 
+## Modules Used
 
-## How It Works 
+- csv → Read/write CSV files  
+- datetime → Date validation and timestamps  
+- collections.defaultdict → Efficient category grouping  
+- os → File existence checks  
 
+---
 
+## Running the Program
 
-- The program reads each transaction from the CSV file using csv.DictReader 
+Run the script using:
 
-- It adds up the amounts for each category using defaultdict(float) 
+```
+python main.py
+```
 
-- It totals the spending and determines the minimum payment 
+On first run, it will automatically create `transactions.csv` if it does not exist.
 
-- It sorts and displays the category spending from highest to lowest 
+---
 
-- It returns key results for possible further use 
+## Application Menu
 
+```
+1. Analyze spending
+2. Manage transactions
+3. Exit
+```
 
+**Manage Transactions Submenu:**
 
-## Error Handling 
+```
+1. View all transactions
+2. Add new transaction
+3. Edit transaction
+4. Delete transaction
+5. Return to main menu
+```
 
+---
 
+## Error Handling
 
-The program manages the following: 
+The program gracefully handles:
 
+- Missing CSV file  
+- Invalid or missing columns  
+- Wrong number formats  
+- Invalid date formats  
+- Empty or corrupted CSV  
+- Invalid user menu inputs  
 
+---
 
-- Missing or incorrect file paths 
+## Future Enhancements
 
-- Missing required columns 
+- Add GUI (Tkinter/PyQt)  
+- Switch from CSV to SQLite/PostgreSQL  
+- Add graphical charts for spending visualization  
+- Export reports to PDF/Excel  
+- User authentication system  
 
-- Invalid numeric values in the amount field 
+---
 
-
-
-## Future Improvements 
-
-
-
-- Filtering by month 
-
-- Calculating interest 
-
-- Exporting reports to text, CSV, or PDF 
-
-- Visualizing spending trends with graphs 
-
-
-
-## Maintained by 
-
-*Moksh Berawala*
+## Maintaned and managed by
+* Moksh Berawala
